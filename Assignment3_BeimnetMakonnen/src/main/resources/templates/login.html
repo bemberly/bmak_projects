@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org"
+	  xmlns:sec="www.thymeleaf.org/thymeleaf-extra-springsecurity5">
+<head>
+<link rel="stylesheet" href="../static/css/loginStyle.css" th:href="@{/css/loginStyle.css}">
+
+<meta charset="UTF-8">
+
+<title>Login Page</title>
+</head>
+<body>
+		<br><br><br><br><br>
+		<form method="post" th:action="@{/login}">
+			
+			<div id="one" th:if="${param.error}">
+			
+				<div class="error">
+					Invalid username or password.
+				</div>
+					
+			</div>
+			
+			<div id="two" th:if="${param.logout}">
+				
+				<div class="error">
+					You have been logged out.
+				</div>	
+			</div>
+			
+				<div id="divL">
+				<br>
+				<br>
+				<br>
+				<h1 id="h1">Please Fill Your Login Credentials</h1>
+				<br><br>
+				<label id="l1">Email:</label><input class="i" type="email" name="username"/><br><br>
+				<label>Password:</label><input class="i" type="password" name="password"/> <br><br><br>
+				<input id="s" type="submit" name="login-submit" value="Log In"/>
+				<br>
+				<br>
+			</div>
+			
+		</form>
+
+</body>
+</html>

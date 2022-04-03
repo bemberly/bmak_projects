@@ -1,0 +1,76 @@
+@charset "UTF-8";
+body {
+		background-color:black;
+
+}
+
+form {
+		background-color:white;
+		margin-left:200px;
+		margin-right:200px;
+}
+
+label {
+		margin-left:340px;
+		padding-right:20px;
+
+}
+
+.auth {
+		margin-left:410px;
+		padding-right:10px;
+		color:white;
+}
+
+span {
+		margin-left:200px;
+		color:white;
+}
+
+#role {
+	
+		margin-left:235px;
+}
+
+#one {
+		text-align:center;
+		margin-left:20px;
+		margin-right:20px;
+		color:darkred;
+		font-size:30px;
+		border: 2px solid white;
+}
+
+#two {
+		margin-left:475px;
+		font-size:38px;
+		color:darkred;
+}
+
+#three {
+		 margin-left:440px;
+		 font-size:38px;
+		 color:white;
+
+}
+
+#four {
+
+		 margin-left:390px;
+		 color:white;
+}
+
+#s1 {
+		margin-left:500px;
+		text-align:center;
+}
+
+#s2 {
+		margin-left:500px;
+		text-align:center;
+}
+
+#r {
+		margin-left:660px;
+		color:white;
+}

@@ -1,0 +1,24 @@
+@charset "UTF-8";
+body {
+		background-color:darkred;
+}
+
+div {
+			 border: 3px solid white;
+}
+
+h1 {
+	 font-size:36px;
+	 text-align:center;
+	 color:black;
+	 font-weight:bold; 
+}
+
+
+a {
+	 font-size:30px;
+	 margin-left:450px;
+	 text-align:center;
+	 color:white;
+	 font-weight:bold;
+}

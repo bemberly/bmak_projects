@@ -1,0 +1,68 @@
+@charset "UTF-8";
+body {
+		background-color:darkred;
+}
+
+
+#one {
+		text-align:center;
+		margin-left:20px;
+		margin-right:20px;
+		color:white;
+		font-size:30px;
+		border: 2px solid black;
+}
+
+label {
+		margin-left:350px;
+		padding-right:10px;
+}
+
+span {
+		margin-left:200px;
+		color:white;
+}
+
+#role {
+		margin-left:235px;
+}
+
+a {
+		margin-left:575px;
+		color:black;
+		font-weight:bold;
+		font-size:37px;
+}
+
+
+
+#two {
+		margin-left:475px;
+		font-size:38px;
+		color:white;
+}
+
+
+
+h2 {
+				padding-left:540px;
+				font-size:25px;
+		
+}
+
+op {
+		margin-left:500px;
+		background-color:white;
+		border:1px solid white;
+}
+
+#three {
+
+		 margin-left:370px;
+		 color:white;
+}
+
+#s {
+		margin-left:675px;
+		text-align:center;
+}

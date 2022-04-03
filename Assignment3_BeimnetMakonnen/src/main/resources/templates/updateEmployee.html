@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org"
+	  xmlns:sec="www.thymeleaf.org/thymeleaf-extra-springsecurity5">
+<head>
+<link rel="stylesheet" href="../static/css/updateStyle.css" th:href="@{/css/updateStyle.css}">
+
+<meta charset="UTF-8">
+<title>Secure Update</title>
+
+</head>
+<body>
+			<br><br>
+			<div sec:authorize="isAuthenticated()">
+			
+			<h1 id="one"> Welcome Secured User </h1><br><br>
+			
+			<label class="auth">User's Name:</label><span sec:authentication="name"></span><br><br>
+			<label class="auth">Roles: </label> <span id="role" sec:authentication="principal.authorities"></span><br><br>
+			
+			<br><br><br>
+			
+			<h1 id="two">This is a Secured Home Page</h1><br>
+			
+			<h1 id="three">UPDATE EMPLOYEE SALARY</h1>
+			
+			<form method="post" action="/processUpdate" th:action="@{/processUpdate}">
+				
+				 <br>
+			
+				  <label>Employee ID:</label><select name="eId">
+				  			   <option th:each="i:${employeeIds}" th:value="${i}" th:text="${i}">
+				  			   </select><br><br><br>
+				  			   
+				  <label>Salary:</label> <input name="SALARY" type="number" step="any"/><br><br>
+				  
+				  <input id="s1" type="submit" value="Update"/><br><br>
+			
+			</form>
+			
+			<div id="d2">
+					<br><br>
+					<a id="r" href="/homePage" th:href="@{/homePage}">Go Back To Homepage</a><br><br>
+			
+					<h1 id="four">If you wish to logout click the Logout button below</h1><br>
+			
+					<form method="get" action="#" th:action="@{/logout}"><br>
+							<input id="s2" type="submit" value="Logout"/><br><br>
+					</form>
+			</div>
+			<br>
+			<br>
+			</div>
+			
+			<br><br><br>
+</body>
+</html>

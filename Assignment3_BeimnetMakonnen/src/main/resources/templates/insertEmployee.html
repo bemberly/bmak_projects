@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org"
+	  xmlns:sec="www.thymeleaf.org/thymeleaf-extra-springsecurity5">
+<head>
+<link rel="stylesheet" href="../static/css/insertStyle.css" th:href="@{/css/insertStyle.css}">
+
+<meta charset="UTF-8">
+<title>Secure Insert</title>
+
+</head>
+<body>
+		
+			<br><br>
+			<div sec:authorize="isAuthenticated()">
+			
+			<h1 id="one"> Welcome Secured User </h1><br><br>
+			
+			<label class="auth">User's Name:</label><span sec:authentication="name"></span><br><br>
+			<label class="auth">Roles: </label> <span id="role" sec:authentication="principal.authorities"></span><br><br>
+			
+			<br><br><br><br>
+			
+			<h1 id="two">This is a Secured Home Page</h1><br>
+				
+			<h1 id="three">INSERT EMPLOYEE</h1>
+		
+			<form method="post" action="/processInsert" th:action="@{/processInsert}" th:object="${employee}">
+		
+			<input type="hidden" th:field="*{EMPLOYEE_ID}"/><br><br>
+			
+			<label>First Name:</label> <input type="text" th:field="*{FIRST_NAME}" required/><br><br>
+			<label>Last Name:</label> <input type="text" th:field="*{LAST_NAME}" required/><br><br>
+			<label>Email:</label> <input type="email" maxlength="25" th:field="*{EMAIL}" required/><br><br>
+			<label>Phone Number:</label> <input type="text" th:field="*{PHONE_NUMBER}" required/><br><br>
+			<label>Hire Date:</label> <input type="date" th:field="*{HIRE_DATE}" required/><br><br>
+			<label>Job ID:</label> <input type="text" maxlength="10" th:field="*{JOB_ID}" required/><br><br>
+			<label>Salary:</label> <input type="number" step="any" min="0" max="999999.99" th:field="*{SALARY}"/><br><br>
+			<label>Commission PCT:</label> <input type="number" min="0" max="99" th:field="*{COMMISSION_PCT}"/><br><br>
+			
+			<label>Manager ID:</label> <input type="number" min="0" max="999999"th:field="*{MANAGER_ID}" required /><br><br>
+						
+			<label>Department ID: </label><select th:field="*{DEPARTMENT_ID}">
+								<option th:each="d:${dList}" th:value="${d}" th:text="${d}"/>		
+						   </select><br><br><br>
+						   
+			<input id="s1" type="submit" value="Insert"/><br><br>
+			
+			</form>
+		
+			<div id="d2">
+					
+					<br><br>
+					<a id="r" href="/homePage" th:href="@{/homePage}">Go Back To Homepage</a><br><br><br>
+			
+					<h1 id="four">If you wish to logout click the Logout button below</h1><br>
+				
+					<form method="get" action="#" th:action="@{/logout}"><br>
+							<input id="s2" type="submit" value="Logout"/><br><br>
+					</form>
+			</div>	
+			
+		</div>
+		<br><br><br>
+
+</body>
+</html>

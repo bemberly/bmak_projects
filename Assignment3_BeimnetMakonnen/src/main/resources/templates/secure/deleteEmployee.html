@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org"
+	  xmlns:sec="www.thymeleaf.org/thymeleaf-extra-springsecurity5">
+<head>
+<meta charset="UTF-8">
+<title>Secure Delete</title>
+<link rel="stylesheet" href="../static/css/deleteStyle.css" th:href="@{/css/deleteStyle.css}">
+</head>
+<body>
+		<div sec:authorize="isAuthenticated()">
+			
+			<h1 id="one"> Welcome Secured User </h1>
+			
+			<label class="auth">User's Name:</label> <span sec:authentication="name"></span><br>
+			<label class="auth">Roles:</label> <span id="role" sec:authentication="principal.authorities"></span><br><br>
+			
+			<br><br><br>
+			<h1 id="two">DELETE EMPLOYEE</h1><br><br>
+			
+			<form method="post" action="/secure/processDelete" th:action="@{/secure/processDelete}"><br><br>
+			
+			<label>Employee Id:</label> <select name="eId">
+						 <option th:each="i:${employeeIds}" th:value="${i}" th:text="${i}"/>
+						 </select><br><br>
+			
+			<br><br><input id="s1" type="submit" value="Delete"/><br><br>
+			
+			</form>
+			
+			
+			
+			<div>
+					<br><br>
+					<a id="r" href="/homePage" th:href="@{/homePage}">Go Back To Homepage</a><br><br>
+			
+				    <h1 id="three">If you wish to logout click the Logout button below</h1><br><br>
+			
+					<form method="get" action="#" th:action="@{/logout}"><br><br>
+							<input id="s2" type="submit" value="Logout"/><br><br>
+					</form>
+			</div>	
+					
+		</div>
+		
+		<br><br>
+
+</body>
+</html>

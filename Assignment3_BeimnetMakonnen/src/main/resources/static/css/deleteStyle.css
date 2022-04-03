@@ -1,0 +1,68 @@
+@charset "UTF-8";
+body {
+		background-color:darkred;
+
+}
+
+form {
+		background-color:white;
+		margin-left:200px;
+		margin-right:200px;
+		
+}
+
+#one {
+		text-align:center;
+		margin-left:20px;
+		margin-right:20px;
+		color:white;
+		font-size:30px;
+		border: 2px solid black;
+}
+
+.auth {
+		margin-left:410px;
+		padding-right:10px;
+		color:white;
+}
+
+span {
+		margin-left:200px;
+		color:white;
+}
+
+#role {
+	
+		margin-left:235px;
+}
+#two {
+		margin-left:510px;
+
+}
+
+label {
+
+		margin-left:410px;
+		padding-right: 20px;
+}
+
+#s1 {
+		margin-left:465px;
+		text-align:center;
+}
+
+#s2 {
+		margin-left:490px;
+		text-align:center;
+}
+
+#three {
+		
+		margin-left:320px;
+
+}
+
+#r {
+		margin-left: 600px;
+		color:white;
+}

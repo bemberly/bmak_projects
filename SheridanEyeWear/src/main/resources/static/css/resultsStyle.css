@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+body {
+	
+		background-color:springgreen;
+}
+
+h1 {
+		text-align:center;
+		color:black;
+		font-size:50px;
+}
+
+
+#table {
+			margin-left: 60px;
+			width:90%;
+			
+}
+
+table, th, tr , td {
+
+		border: 2px solid black;
+}
+
+th {
+		padding-right:7px;
+		color:black;
+		font-weight:bold;
+}
+
+td {
+		background-color:black;
+		color:white;;
+}
+
+ul {
+		padding-left:140px;
+		width:130%;
+		list-style-type:none;
+}
+	
+li {
+		font-size:18px;
+		float:left;
+		padding-top:50px;
+		padding-left:50px;
+		padding-right:60px;
+		text-align:center;
+		padding-bottom:50px;
+		background-color:black;				
+}
+
+a {
+	 	font-weight:bold; 	
+	 	color:white;
+}

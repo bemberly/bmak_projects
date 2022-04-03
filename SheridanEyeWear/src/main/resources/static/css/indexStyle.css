@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+body {
+		background-color:black;		
+		
+}
+
+h1 {
+		font-size:50px;
+		text-align:center;
+		color:white;
+}
+			
+ul {
+		padding-left:230px;
+		width:130%;
+		list-style-type:none;
+}
+	
+li {
+		font-size:18px;
+		float:left;
+		padding-top:50px;
+		padding-left:50px;
+		padding-right:60px;
+		text-align:center;
+		padding-bottom:50px;
+		background-color:springgreen;				
+}
+
+a {
+	 	font-weight:bold; 	
+	 	color:black;
+}
+
+
+#i1 {
+		padding-top:55px;
+		padding-left: 160px;
+		width:80%;
+		height:20%;
+}
+
+
+

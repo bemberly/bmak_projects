@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<style>
+
+body {
+	
+		background-color:black;
+}
+
+h1 {
+		text-align:center;
+		color:white;
+}
+
+#table {
+			margin-left: 30px;
+			width:90%;
+			
+}
+
+table, th, tr , td {
+
+		border: 2px solid springgreen;
+}
+
+th {
+		padding-right:7px;
+		color:white;
+}
+
+td {
+		background-color:white;
+		color:black;
+}
+
+ul {
+		padding-left:265px;
+		width:130%;
+		list-style-type:none;
+}
+	
+li {
+		font-size:18px;
+		float:left;
+		padding-top:50px;
+		padding-left:50px;
+		padding-right:60px;
+		text-align:center;
+		padding-bottom:50px;
+		background-color:white;				
+}
+
+a {
+	 	font-weight:bold; 	
+	 	color:black;
+}
+
+
+</style>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+			<h1> Sheridan Eyewear</h1>
+			
+			<table id="table">
+					<tr>
+							<th>Product Name</th>
+							<th>Brand Name</th>
+							<th>Frame Type</th>
+							<th>Color</th>
+							<th>Size</th>
+							<th>Lens Type</th>
+							<th>Price</th>
+							
+					</tr>
+					
+					<tr th:each="aSunglass:${sunglassesList}">
+					
+							<td th:text="${aSunglass.productName}"></td>
+							<td th:text="${aSunglass.brand}"></td>
+							<td th:text="${aSunglass.frameType}"></td>
+							<td th:text="${aSunglass.color}"></td>
+							<td th:text="${aSunglass.size}"></td>
+							<td th:text="${aSunglass.lensType}"></td>
+							<td th:text="${aSunglass.price}"></td>
+							
+					</tr>
+				
+							
+		</table>
+		
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		
+					<ul>
+					
+						<li><a href="/">Home Page</a></li>
+
+						<li><a href="/add">Add a Pair of of Sunglasses to List</a></li>						
+			
+						<li><a href="/search">Search Sunglasses By Brand</a></li>
+		
+		
+					</ul>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="../static/css/addStyle.css" th:href="@{/css/addStyle.css}">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+		
+	 	<img id="i1" src="../static/images/tropical.jpg" th:src="@{/images/tropical.jpg}" />	
+	 					
+		<img id="i2" src="../static/images/tropical.jpg" th:src="@{/images/tropical.jpg}" />	
+		
+
+	
+	
+		
+			<h1>Add Your Favorite Sunglasses</h1>
+			
+			
+			
+
+		<h2>Please Fill Out Form To Add to The Sunglasses List</h2>
+			
+		
+			<br>
+		
+		<form method="post" action="#" th:action="@{/addSunglass}" th:object="${sunglasses}">
+		
+		<br>
+					
+		<label>Product Name:</label><select class="a" th:field="*{productName}">
+			<option th:each="n:*{productNames}" th:value="${n}" th:text="${n}"/>
+			</select><br><br>
+			
+			<label>Brand:</label><select class="a" th:field="*{brand}">
+			<option th:each="b:*{brands}" th:value="${b}" th:text="${b}"/>
+			</select><br><br>
+			
+			<label>Frame Type:</label><select class="a" th:field="*{frameType}">
+			<option th:each="f:*{frameTypes}" th:value="${f}" th:text="${f}"/>
+			</select><br><br>
+			
+			<label>Color:</label><select class="a" th:field="*{color}">
+			<option th:each="c:*{colors}" th:value="${c}" th:text="${c}"/>
+			</select><br><br>
+			
+			<label>Size:</label><select class="a" th:field="*{size}">
+			<option th:each="s:*{sizes}" th:value="${s}" th:text="${s}"/>
+			</select><br><br>
+			
+			<label>Lens Type:</label><select class="a" th:field="*{lensType}">
+			<option th:each="l:*{lensTypes}" th:value="${l}" th:text="${l}"/>
+			</select><br><br>
+			
+			<label>Price:</label><select class="a" th:field="*{price}">
+			<option th:each="p:*{prices}" th:value="${p}" th:text="${p}"/>
+			</select><br><br><br>
+			
+			<input id="submit" type="submit" value="Add Sunglasses!"/>	
+			<br>
+		</form>
+	
+		
+		
+		
+		
+		
+					<ul>
+					
+						<li><a href="/">Home Page</a></li>
+			
+						<li><a href="/search">Search Sunglasses By Brand</a></li>
+		
+						<li><a href="/display">Display All Sunglasses</a></li>
+		
+					</ul>
+		
+		
+		
+		
+</body>
+</html>
